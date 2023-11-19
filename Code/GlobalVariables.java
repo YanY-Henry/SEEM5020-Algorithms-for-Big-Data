@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class GlobalVariables {
     public static int DATAAMOUNT = 10000000 ;
@@ -12,7 +13,8 @@ public class GlobalVariables {
     private static int[] array4 = {74500, 75500};
     private static int[] array5 = {99000, 100000};
     public  static List<int[]> INTERVALS = new ArrayList<>(Arrays.asList(array1, array2, array3, array4, array5));
-    public static long SEED = 5020L ;
+    Random rand = new Random();
+    public  static long SEED = rand.nextLong();
 
     public static double SNUM = 150.0/DATAAMOUNT ; // \gamma
     public static int RANGE = (int)Math.ceil(1/SNUM);  // w = range of hash functions
